@@ -4,6 +4,21 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Miladi(Georgian DateTime) To Persian Converter</Title>
+    <Version>1.0.0</Version>
+    <Authors>Ali Jebali</Authors>
+    <Company>BineshDev</Company>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Description>Georgian DateTime To Persian DateTime Converter with Persian Month Name, Date Seperator of dashes (-) and Slashes (/), Converter to Unix time, Converter for Persian Day Of Week</Description>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
