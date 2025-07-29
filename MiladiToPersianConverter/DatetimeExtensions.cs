@@ -182,6 +182,27 @@ public static partial class DatetimeExtentions
     }
 
     /// <summary>
+    /// Set Datetime Sepereator for persian DatetimeString that has Hours and Minutes (Not Seconds)
+    /// </summary>
+    /// <param name="DateTime_">12 digit datetime string that has hours and minutes</param>
+    /// <returns>a persian datetime string with this format : 1404-02-01 - 14:56</returns>
+    public static string SetDateTimeSepratorDash(this string DateTime_)
+    {
+        if (DateTime_.Length < 12)
+        {
+            return DateTime_;
+        }
+        else
+        {
+            return DateTime_.Substring(8, 2) + ":" +
+                   DateTime_.Substring(10, 2) + " - " +
+                   DateTime_.Substring(0, 4) + "-" +
+                   DateTime_.Substring(4, 2) + "-" +
+                   DateTime_.Substring(6, 2);
+        }
+    }
+
+    /// <summary>
     /// Set Slashes between persian datetime string that was made by MiladiToPersian() Method
     /// </summary>
     /// <param name="date">persian string like 14020902</param>
